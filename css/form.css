@@ -1,0 +1,38 @@
+.salto_linea {
+            padding: 15px;
+        }
+
+        .formulario_principal {
+            margin-top: 15px;
+        }
+
+        form {
+            border: 1px solid rgb(197, 193, 193);
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        /* Mensajes de error y éxito */
+        .invalid-feedback-custom {
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            color: #dc3545;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .valid-feedback-custom {
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            color: #198754;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Rango personalizado (opcional) */
+        input[type="range"] {
+            width: 100%;
+        }  

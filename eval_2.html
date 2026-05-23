@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Inicial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/form.css">
+    <script src="./js/eval_2.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <p class="h1">Formulario de Registro</p>
+        </div>
+        <div class="row formulario_principal">
+            <div class="col-3"></div>
+            <div class="col-9">
+                <p>Los campos marcados con asterisco (*) son obligatorios.</p>
+                <form id="registroForm" method="post">
+                    <input type="hidden" id="input_oculto" value="datos ocultos">
+
+                    <!-- Nombre -->
+                    <label for="fname" class="form-label">* Nombre:</label>
+                    <input class="form-control" type="text" id="fname" name="fname" placeholder="Ingrese su nombre">
+                    <div id="nombreError" class="invalid-feedback-custom"></div>
+                    <div id="nombreValido" class="valid-feedback-custom"></div>
+                    <br>
+
+                    <!-- Apellido -->
+                    <label for="lname" class="form-label">* Apellido:</label>
+                    <input class="form-control" type="text" id="lname" name="lname" placeholder="Ingrese su apellido">
+                    <div id="apellidoError" class="invalid-feedback-custom"></div>
+                    <div id="apellidoValido" class="valid-feedback-custom"></div>
+                    <br>
+
+                    <!-- RUT chileno -->
+                    <label for="rut" class="form-label">* Rut:</label>
+                    <input class="form-control" type="text" id="rut" name="rut" placeholder="Ej: 12.345.678-9 o 12345678-9">
+                    <div id="rutError" class="invalid-feedback-custom"></div>
+                    <div id="rutValido" class="valid-feedback-custom"></div>
+                    <br>
+
+                    <!-- Fecha de nacimiento -->
+                    <label for="fecha_nac" class="form-label"> Fecha Nacimiento:</label>
+                    <input type="date" class="form-control" id="fecha_nac" name="fecha_nac">
+                    <div id="fechaError" class="invalid-feedback-custom"></div>
+                    <div id="fechaValido" class="valid-feedback-custom"></div>
+                    <small class="text-muted">Debes ser mayor de 18 años.</small>
+                    <br><br>
+
+                    <!-- Email -->
+                    <label for="email" class="form-label">* Email:</label>
+                    <input class="form-control" type="email" id="email" name="email" placeholder="usuario@dominio.cl">
+                    <div id="emailError" class="invalid-feedback-custom"></div>
+                    <div id="emailValido" class="valid-feedback-custom"></div>
+                    <br>
+
+                    <!-- Años de Estudio (rango) -->
+                    <label for="experiencia" class="form-label">Años de Estudio:</label>
+                    <input type="range" id="experiencia" name="experiencia" min="0" max="10" value="5"
+                        oninput="this.nextElementSibling.value = this.value">
+                    <output>5</output>
+                    <div class="salto_linea"></div>
+
+                    <!-- Género -->
+                    <p>Género *</p>
+                    <input type="radio" id="generoMujer" name="genero" value="mujer">
+                    <label for="generoMujer">Mujer</label><br>
+                    <input type="radio" id="generoHombre" name="genero" value="hombre">
+                    <label for="generoHombre">Hombre</label><br>
+                    <input type="radio" id="generoOtro" name="genero" value="N/A">
+                    <label for="generoOtro">Prefiero NO decir</label>
+                    <div id="generoError" class="invalid-feedback-custom"></div>
+                    <div id="generoValido" class="valid-feedback-custom"></div>
+                    <div class="salto_linea"></div>
+
+                    <!-- Contraseña -->
+                    <label for="password" class="form-label">* Contraseña:</label>
+                    <input class="form-control" type="password" id="password" name="password" placeholder="Mínimo 8 caracteres, letras y números">
+                    <div id="passError" class="invalid-feedback-custom"></div>
+                    <div id="passValido" class="valid-feedback-custom"></div>
+                    <small class="text-muted">Mínimo 8 caracteres, al menos una letra y un número.</small>
+                    <br><br>
+
+                    <!-- Confirmar contraseña-->
+                    <label for="confirmPassword" class="form-label">* Confirmar contraseña:</label>
+                    <input class="form-control" type="password" id="confirmPassword" name="confirmPassword" placeholder="Repite la contraseña">
+                    <div id="confirmError" class="invalid-feedback-custom"></div>
+                    <div id="confirmValido" class="valid-feedback-custom"></div>
+                    <br>
+
+                    <!-- Botones -->
+                    <input type="button" onclick="cambiar_fondo();" class="btn btn-secondary" value="Cambiar Color">
+                    <input type="button" onclick="cancelar()" class="btn btn-secondary" value="Cancelar">
+                    <input type="submit" class="btn btn-primary" value="Aceptar">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">col 1</div>
+            <div class="col">col 2</div>
+            <div class="col">col 3</div>
+        </div>
+    </div>
+</body>
+<!-- <script>
+    alert('Nuevo Script...')
+</script> -->
+
+</html>
