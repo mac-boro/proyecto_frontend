@@ -1,5 +1,5 @@
 # FRONTEND_IEC_N3_C1
-CV estático unidad 1 HTML y CSS
+Formulario de Registro con Validación de Datos | Unidad 2 JavaScript
 
 Herramientas:
 VS Code
